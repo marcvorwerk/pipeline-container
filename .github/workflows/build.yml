@@ -12,6 +12,8 @@ jobs:
         include:
           - image: ansible-lint
             dockerfile: ansible-lint/Dockerfile
+          - image: shellcheck
+            dockerfile: shellcheck/Dockerfile
     steps:
       -
         name: Checkout
