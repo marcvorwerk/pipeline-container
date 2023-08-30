@@ -15,7 +15,7 @@ jobs:
           - image: shellcheck
             dockerfile: shellcheck/Dockerfile
           - image: python-lint
-            ockerfile: python-lint/Dockerfile
+            dockerfile: python-lint/Dockerfile
     steps:
       -
         name: Checkout
