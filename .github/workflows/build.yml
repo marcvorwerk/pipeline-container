@@ -42,7 +42,7 @@ jobs:
         run: |
           tag=$(grep -oP '^#\s*TAG:\s*\K.*' ${{ matrix.dockerfile }} | tr -d '[:space:]')
           echo "Tag extracted from Dockerfile: $tag"
-          echo "::set-output name=tag::$tag"
+          echo "tag=$tag" >> $GITHUB_OUTPUT
       -
         name: Build and push
         if: steps.changes.outputs.src == 'true'
