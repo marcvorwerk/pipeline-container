@@ -1,4 +1,4 @@
-# TAG: 1.0
+# TAG: 1.1
 
 FROM python:3.11.5
 
@@ -6,6 +6,10 @@ COPY requirements.txt /tmp/requirements.txt
 
 RUN pip3 install --no-cache-dir --prefer-binary \
     -r /tmp/requirements.txt
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends nodejs \
+    && rm -rf /var/lib/apt/lists/*
 
 CMD [ "/bin/bash" ]
 
