@@ -7,6 +7,7 @@ COPY requirements.txt /tmp/requirements.txt
 RUN pip3 install --no-cache-dir --prefer-binary \
     -r /tmp/requirements.txt
 
+# hadolint ignore=DL3008
 RUN apt-get update \
     && apt-get install -y --no-install-recommends nodejs \
     && rm -rf /var/lib/apt/lists/*
