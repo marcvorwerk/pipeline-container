@@ -12,4 +12,4 @@ jobs:
         with:
           dockerfile: Dockerfile
           recursive: true
-          verbose: true
+          verbose: false
